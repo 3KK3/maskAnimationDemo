@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="phd-gq-Uos">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="0436-1903.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Fpj-bA-gnl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcv-2I-jQO">
+                                <rect key="frame" x="339" y="28" width="34" height="30"/>
+                                <animations/>
+                                <state key="normal" title="push"/>
+                                <connections>
+                                    <segue destination="cfJ-Ze-ANm" kind="push" id="NiW-9j-tLM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nsS-kn-OcW"/>
+                    <connections>
+                        <outlet property="button" destination="jcv-2I-jQO" id="pVg-di-UQP"/>
+                        <outlet property="imageView" destination="Fpj-bA-gnl" id="klx-iK-ipC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="347"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="Ask-gh-K0c">
+            <objects>
+                <viewController id="cfJ-Ze-ANm" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QLL-hi-g0I"/>
+                        <viewControllerLayoutGuide type="bottom" id="D4I-4X-8V4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cOh-Dm-h7w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="20140314201537_aaw8G.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="2di-yH-Mqf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AK-Hf-LKt">
+                                <rect key="frame" x="28" y="20" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="pop"/>
+                                <connections>
+                                    <action selector="popClick:" destination="cfJ-Ze-ANm" eventType="touchUpInside" id="0qf-V2-pQH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1jg-WE-b50"/>
+                    <connections>
+                        <outlet property="button" destination="1AK-Hf-LKt" id="Lnc-wa-9HB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tHE-gU-AaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1487" y="347"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WNU-KZ-JEh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="phd-gq-Uos" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" alpha="0.0" contentMode="scaleToFill" id="cbA-1r-a0a">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tB1-oY-MhI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2id-rE-P6R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="347"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="0436-1903.jpg" width="480" height="800"/>
+        <image name="20140314201537_aaw8G.jpeg" width="723" height="1024"/>
+    </resources>
+</document>
